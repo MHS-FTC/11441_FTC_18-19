@@ -1,6 +1,7 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.Utilitys;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
+import org.firstinspires.ftc.teamcode.ByronSucks;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
 
 /**
@@ -15,6 +16,7 @@ public class Constants {
     public static double DEFAULT_SPEED = 0.75; //Sets default speed to 0.75 power
     public static double WHEEL_CIRCUMFERENCE = 4 * Math.PI; //Gives circumference for wheel to calculate distance.
     public static final double TURN_DISTANCE_90 = 17;// Inches wheel turns in a 90 degree turn.
+    public static final String VUFORIA_LICENCE_KEY = "";
 
 
     public static Module encodeForward(double distance) {  //Drives forward, using Encoders, a set imputed distance.
