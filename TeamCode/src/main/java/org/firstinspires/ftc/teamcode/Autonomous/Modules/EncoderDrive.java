@@ -49,8 +49,8 @@ public class EncoderDrive extends Module {
 
 
         //sets targets
-        leftTarget = (int) (leftRotations * drive.getMotorType().getTicksPerRev());
-        rightTarget = (int) (rightRotations * drive.getMotorType().getTicksPerRev());
+        leftTarget = (int) (leftRotations * drive.getLeftSideMotors()[0].getMotorType().getTicksPerRev());
+        rightTarget = (int) (rightRotations * drive.getRightSideMotors()[0].getMotorType().getTicksPerRev());
 
         //Note we use absolute value so if they already reversed them we don' have to worry
         if (leftTarget < 0) {

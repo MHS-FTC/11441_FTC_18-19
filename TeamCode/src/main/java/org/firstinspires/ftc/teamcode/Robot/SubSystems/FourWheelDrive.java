@@ -3,7 +3,6 @@ package org.firstinspires.ftc.teamcode.Robot.SubSystems;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.configuration.MotorConfigurationType;
 
 import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.DriveSystemTemplate;
 
@@ -45,9 +44,6 @@ public class FourWheelDrive extends DriveSystemTemplate {
         return this;
     }
 
-    public MotorConfigurationType getType() {
-        return rightFrontMotor.getMotorType();
-    }// TODO: 1/1/2018 Make sure all motors are the same type
 
     @Override
     public DcMotor[] getMotors() {

@@ -2,7 +2,6 @@ package org.firstinspires.ftc.teamcode.Robot.SubSystems;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.configuration.MotorConfigurationType;
 
 import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.DriveSystemTemplate;
 
@@ -31,11 +30,6 @@ public class TwoWheelDrive extends DriveSystemTemplate {
         return this;
     }
 
-    public TwoWheelDrive setMotorType(MotorConfigurationType type) {// TODO: 9/27/2017 add way to reverse one of the motors
-        leftMotor.setMotorType(type);
-        rightMotor.setMotorType(type);
-        return this;
-    }
 
     @Override
     public DcMotor[] getMotors() {

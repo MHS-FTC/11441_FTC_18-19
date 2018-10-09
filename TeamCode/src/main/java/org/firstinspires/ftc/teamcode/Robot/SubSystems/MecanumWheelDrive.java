@@ -3,7 +3,6 @@ package org.firstinspires.ftc.teamcode.Robot.SubSystems;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.configuration.MotorConfigurationType;
 
 import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.SidedDriveSystemTemplate;
 
@@ -101,11 +100,4 @@ public class MecanumWheelDrive extends SidedDriveSystemTemplate {
         return this;
     }
 
-    public MecanumWheelDrive setMotorType(MotorConfigurationType type) {
-        leftFrontMotor.setMotorType(type);
-        rightFrontMotor.setMotorType(type);
-        leftBackMotor.setMotorType(type);
-        rightBackMotor.setMotorType(type);
-        return this;
-    }
 }

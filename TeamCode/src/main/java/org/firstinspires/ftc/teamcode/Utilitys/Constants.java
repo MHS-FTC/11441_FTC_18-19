@@ -1,7 +1,7 @@
 package org.firstinspires.ftc.teamcode.Utilitys;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
-import org.firstinspires.ftc.teamcode.ByronSucks;
+import org.firstinspires.ftc.teamcode.TeamDriveTime;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
 
 /**
@@ -11,8 +11,8 @@ import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
  */
 
 public class Constants {
-    public static Module forward = new ByronSucks().setSpeeds(1,1).setTime(2000); //Moves forward at full power for 2 sec.
-    public static Module turn = new ByronSucks().setSpeeds(0.5, 0.9).setTime(2500); //Turns the robot to the left.
+    public static Module forward = new TeamDriveTime().setSpeeds(1,1).setTime(2000); //Moves forward at full power for 2 sec.
+    public static Module turn = new TeamDriveTime().setSpeeds(0.5, 0.9).setTime(2500); //Turns the robot to the left.
     public static double DEFAULT_SPEED = 0.75; //Sets default speed to 0.75 power
     public static double WHEEL_CIRCUMFERENCE = 4 * Math.PI; //Gives circumference for wheel to calculate distance.
     public static final double TURN_DISTANCE_90 = 17;// Inches wheel turns in a 90 degree turn.

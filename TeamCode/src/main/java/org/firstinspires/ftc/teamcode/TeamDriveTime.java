@@ -9,7 +9,7 @@ import org.firstinspires.ftc.teamcode.FTC_API.Examples.Drive;
  * Simple drive for time module
  */
 
-public class ByronSucks extends Module {
+public class TeamDriveTime extends Module {
     private Drive drive;
     private boolean isDone = false;
     private double startTime;
@@ -45,13 +45,13 @@ public class ByronSucks extends Module {
     }
 
 
-    public ByronSucks setSpeeds(double left, double right) {
+    public TeamDriveTime setSpeeds(double left, double right) {
         leftSpeed = left;
         rightSpeed = right;
         return this;
     }
 
-    public ByronSucks setTime(int time) {
+    public TeamDriveTime setTime(int time) {
         driveTime = time;
         return this;
     }

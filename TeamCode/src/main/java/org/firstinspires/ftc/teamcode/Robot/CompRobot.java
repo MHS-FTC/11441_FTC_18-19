@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.Robot;
 
 import org.firstinspires.ftc.teamcode.FTC_API.Robot.RobotBase;
 import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.DriveSystemTemplate;
+import org.firstinspires.ftc.teamcode.Robot.SubSystems.Arm;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.MecanumWheelDrive;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.ParticleGrabber;
 
@@ -12,11 +13,16 @@ import org.firstinspires.ftc.teamcode.Robot.SubSystems.ParticleGrabber;
 public class CompRobot extends RobotBase {
     public MecanumWheelDrive drive = new MecanumWheelDrive()
             .setMotorNames("leftFront", "rightFront", "leftBack", "rightBack");//Drives the robot
-    public ParticleGrabber grabber= new ParticleGrabber().setMotorNames("Spinner");
+    public ParticleGrabber grabber= new ParticleGrabber()
+            .setMotorNames("Spinner");
+    public Arm lift= new Arm()
+            .setMotorNames("lift");
+            //.setServoNames("hand", "handLock")
 
     public CompRobot() {
         addSubSystem(drive);
         addSubSystem(grabber);
+        addSubSystem(lift);
     }
 
     /**
