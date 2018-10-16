@@ -16,16 +16,13 @@ import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.SubSystem;
 public class ParticleGrabber extends SubSystem {
 
     private DcMotor spinner;
-    //private Servo spinner;
 
     private String spinnerName;
-    //private String spinnerName;
     private final double SPINNER_SPEED= 0.5;
 
     @Override
     public boolean init(HardwareMap hardwareDevices) {
         spinner = hardwareDevices.dcMotor.get(spinnerName);
-        //spinner = hardwareDevices.servo.get(spinnerName);
         return true;
     }
 
@@ -43,10 +40,5 @@ public class ParticleGrabber extends SubSystem {
         spinnerName = spinner;
         return this;
     }
-
-    //public ParticleGrabber setServoNames(String spinner) {
-    //spinnerName = spinner;
-    //return this;
-    //}
 
 }

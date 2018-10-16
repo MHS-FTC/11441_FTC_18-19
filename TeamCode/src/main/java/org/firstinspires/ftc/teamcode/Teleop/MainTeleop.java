@@ -33,23 +33,17 @@ public class MainTeleop extends OpMode {
 
         double extendInput = -gamepad2.left_stick_y;
 
-        if (gamepad1.dpad_up) {
-            robot.lift.liftUp();
-        }
-        else if (gamepad1.dpad_down) {
-            robot.lift.liftDown();
-        }
-        else {
-            robot.lift.stopLift();
-        }
+        if (gamepad1.dpad_up) {robot.lift.liftUp();}
+        else if (gamepad1.dpad_down) {robot.lift.liftDown();}
+        else {robot.lift.stopLift();}
 
 
-        if (gamepad1.x) {
-            robot.grabber.startSpinner();
-        } else if (gamepad1.a) {
-            robot.grabber.reverseSpinner();
-        } else {
-            robot.grabber.stopSpinner();
-        }
+        if (gamepad2.x) {robot.grabber.startSpinner();}
+        else if (gamepad2.a) {robot.grabber.reverseSpinner();}
+        else {robot.grabber.stopSpinner();}
+
+        if (gamepad2.dpad_up) {robot.lifterBall.ballRaise();}
+        else if (gamepad2.dpad_down) {robot.lifterBall.ballDown();}
+        else {robot.lifterBall.ballStop();}
     }
 }

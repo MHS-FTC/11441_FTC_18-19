@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.Robot;
 import org.firstinspires.ftc.teamcode.FTC_API.Robot.RobotBase;
 import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.DriveSystemTemplate;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.Arm;
+import org.firstinspires.ftc.teamcode.Robot.SubSystems.BallLifter;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.MecanumWheelDrive;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.ParticleGrabber;
 
@@ -17,19 +18,14 @@ public class CompRobot extends RobotBase {
             .setMotorNames("Spinner");
     public Arm lift= new Arm()
             .setMotorNames("lift");
-            //.setServoNames("hand", "handLock")
+    public BallLifter lifterBall= new BallLifter()
+            .setMotorNames("ballLift");
 
     public CompRobot() {
         addSubSystem(drive);
         addSubSystem(grabber);
         addSubSystem(lift);
-    }
+        addSubSystem(lifterBall);
 
-    /**
-     * @return the implementation of the drive system this robot uses
-     */
-    @Override
-    public DriveSystemTemplate getDriveSystem() {
-        return drive;
     }
 }
