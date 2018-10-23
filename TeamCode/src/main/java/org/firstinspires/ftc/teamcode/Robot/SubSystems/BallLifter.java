@@ -15,7 +15,7 @@ public class BallLifter extends SubSystem {
 
     private DcMotor ballLiftMotor;
 
-    private Servo dump;
+    private Servo dumpServo;
 
     private String ballLiftName;
     private String dumpName;
@@ -25,7 +25,8 @@ public class BallLifter extends SubSystem {
     @Override
     public boolean init(HardwareMap hardwareDevices) {
         ballLiftMotor = hardwareDevices.dcMotor.get(ballLiftName);
-        dump = hardwareDevices.servo.get(dumpName);
+        dumpServo = hardwareDevices.servo.get(dumpName);
+        dumpServo.setPosition(0.05);
         ballLiftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
         return true;
     }
@@ -40,9 +41,8 @@ public class BallLifter extends SubSystem {
 
     public void ballDown() {
         ballLiftMotor.setPower(-BALL_LIFT_SPEED);
-
-
     }
+
 
     public BallLifter setMotorNames(String ballLift) {
         ballLiftName = ballLift;
