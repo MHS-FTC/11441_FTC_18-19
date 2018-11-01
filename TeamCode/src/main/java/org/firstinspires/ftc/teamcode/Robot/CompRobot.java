@@ -14,9 +14,9 @@ import org.firstinspires.ftc.teamcode.Robot.SubSystems.ParticleGrabber;
 public class CompRobot extends RobotBase {
     public MecanumWheelDrive drive = new MecanumWheelDrive()
             .setMotorNames("leftFront", "rightFront", "leftBack", "rightBack");//Drives the robot
-    public ParticleGrabber grabber= new ParticleGrabber()
-            //.setMotorNames("Spinner");
-            .setServoNames("Spinner","Collector");
+    public ParticleGrabber grabber = new ParticleGrabber()
+            .setMotorNames("CollectorLift")
+            .setServoNames("Spinner");
     public Arm lift= new Arm()
             .setMotorNames("lift");
     public BallLifter lifterBall= new BallLifter()

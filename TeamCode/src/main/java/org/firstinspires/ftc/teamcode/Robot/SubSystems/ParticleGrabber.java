@@ -15,51 +15,45 @@ import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.SubSystem;
 
 public class ParticleGrabber extends SubSystem {
 
-    //private DcMotor spinner;
+    private DcMotor collectorLiftMotor;
     private Servo spinnerServo;
-    private Servo collectorLiftServo;
 
     private String spinnerName;
-    private String collectorName;
-    private final double SPINNER_SPEED= 0.5;
+    private String collectorLiftName;
+
+    private final double COLLECTOR_LIFT_SPEED = 0.5;
+
 
     @Override
     public boolean init(HardwareMap hardwareDevices) {
-        //spinner = hardwareDevices.dcMotor.get(spinnerName);
         spinnerServo = hardwareDevices.servo.get(spinnerName);
+        collectorLiftMotor = hardwareDevices.dcMotor.get(collectorLiftName);
         return true;
     }
 
-    //public void startSpinner() {
-        //spinner.setPower(SPINNER_SPEED);//}
-
-    //public void stopSpinner() {
-        //spinner.setPower(0);//}
-
-    //public void reverseSpinner() {
-        //spinner.setPower(-SPINNER_SPEED);//}
-
-    //public ParticleGrabber setMotorNames(String spinner) {
-        //spinnerName = spinner;
-        //return this;
-    //}
-
-
-    public void collectorUp() {
-        collectorLiftServo.setPosition(0.05);
+    public void collectorLiftUp() {
+        collectorLiftMotor.setPower(COLLECTOR_LIFT_SPEED);
     }
 
-    public void collectorMid() {
-        collectorLiftServo.setPosition(0.4);
+    public void collectorLiftDown() {
+        collectorLiftMotor.setPower(-COLLECTOR_LIFT_SPEED);
     }
 
-    public void collectorDown() {
-        collectorLiftServo.setPosition(0.5);
+    public void collectorLiftStop() {
+        collectorLiftMotor.setPower(0);
     }
 
-    public ParticleGrabber setServoNames(String spinner, String collector) {
+
+    public void intake() {spinnerServo.setPosition(+0.03);}
+    public void spit() {spinnerServo.setPosition(-0.03);}
+
+    public ParticleGrabber setServoNames(String spinner) {
         spinnerName = spinner;
-        collectorName = collector;
+        return this;
+    }
+
+    public ParticleGrabber setMotorNames(String collectorLift) {
+        collectorLiftName = collectorLift;
         return this;
     }
 

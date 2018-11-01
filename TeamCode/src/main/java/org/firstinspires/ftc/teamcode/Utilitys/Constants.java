@@ -17,6 +17,8 @@ public class Constants {
     public static double WHEEL_CIRCUMFERENCE = 4 * Math.PI; //Gives circumference for wheel to calculate distance.
     public static final double TURN_DISTANCE_90 = 17;// Inches wheel turns in a 90 degree turn.
     public static final String VUFORIA_LICENCE_KEY = "";
+    //public static double LEAD_SCREW_TPI = 12;
+    //public static double fgfg= LEAD_SCREW_TPI * ;
 
 
     public static Module encodeForward(double distance) {  //Drives forward, using Encoders, a set imputed distance.
@@ -51,4 +53,8 @@ public class Constants {
         double distance = distancePer * degrees;
         return new EncoderDrive().setSpeed(DEFAULT_SPEED).setDistances(distance, -distance);
     }
+
+    //public static double getLeadScrewTpi() {
+        //return new (LEAD_SCREW_TPI * );
+    //}
 }
