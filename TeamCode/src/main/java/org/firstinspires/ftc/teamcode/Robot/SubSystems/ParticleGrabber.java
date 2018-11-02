@@ -44,8 +44,19 @@ public class ParticleGrabber extends SubSystem {
     }
 
 
-    public void intake() {spinnerServo.setPosition(+0.03);}
-    public void spit() {spinnerServo.setPosition(-0.03);}
+    public void intake() {
+        double position = spinnerServo.getPosition()+0.005;
+        spinnerServo.setPosition(position);
+    }
+    public void spit() {
+        double position = spinnerServo.getPosition()-0.005;
+        spinnerServo.setPosition(position);
+    }
+
+    public void stop() {
+        double stop = spinnerServo.getPosition();
+        spinnerServo.setPosition(stop);
+    }
 
     public ParticleGrabber setServoNames(String spinner) {
         spinnerName = spinner;
