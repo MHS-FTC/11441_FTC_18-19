@@ -21,7 +21,6 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turnRight90;
 public class Crater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private Module[][] steps = new Module[][]{
-            {},
             {new Wait().setWaitTime(500)},
             {new EncoderDrive().setDistances(-30,-30).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},

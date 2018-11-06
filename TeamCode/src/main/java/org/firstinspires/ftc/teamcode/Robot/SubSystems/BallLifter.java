@@ -9,6 +9,7 @@ import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.SubSystem;
 
 /**
  * Created by byron.nice on 10/15/2018.
+ * Ethan Hampton Was Here! Please Remove This Line Cuz The Capitalization Sucks
  */
 
 public class BallLifter extends SubSystem {
