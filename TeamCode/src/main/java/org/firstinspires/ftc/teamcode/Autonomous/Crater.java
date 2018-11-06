@@ -20,17 +20,24 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turnRight90;
 @Autonomous
 public class Crater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
-    private Module[][] steps = new Module[][]{
+    private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
-            {new EncoderDrive().setDistances(-30,-30).setSpeed(DEFAULT_SPEED)},
+            {new EncoderDrive().setDistances(-25,-25).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turnRight90()},
-            {new EncoderDrive().setDistances(50,50).setSpeed(DEFAULT_SPEED)}
+            {turn(90)},
+            {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)}
     };
 
     @Override
     public void init() {
         init(hardwareMap,bot,steps);
     }
+
+    @Override
+    public void tick(){
+        telemetry.addLine("Left" + bot.drive.getLeftSideMotors()[0].getCurrentPosition() +";"+bot.drive.getLeftSideMotors()[1].getCurrentPosition());
+        telemetry.addLine("Right" + bot.drive.getRightSideMotors()[0].getCurrentPosition() +";"+bot.drive.getRightSideMotors()[1].getCurrentPosition());
+    }
+
 }
 
