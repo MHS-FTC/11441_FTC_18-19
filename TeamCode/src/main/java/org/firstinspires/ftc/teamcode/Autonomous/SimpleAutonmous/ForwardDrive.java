@@ -31,4 +31,10 @@ public class ForwardDrive extends AutonomousBase {
     public void init() {
         init(hardwareMap, bot, steps);
     }
+
+    @Override
+    public void tick(){
+        telemetry.addLine("Left" + bot.drive.getLeftSideMotors()[0].getCurrentPosition() +";"+bot.drive.getLeftSideMotors()[1].getCurrentPosition());
+        telemetry.addLine("Right" + bot.drive.getRightSideMotors()[0].getCurrentPosition() +";"+bot.drive.getRightSideMotors()[1].getCurrentPosition());
+    }
 }
