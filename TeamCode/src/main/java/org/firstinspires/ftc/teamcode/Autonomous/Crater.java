@@ -24,8 +24,17 @@ public class Crater extends AutonomousBase {
             {new Wait().setWaitTime(500)},
             {new EncoderDrive().setDistances(-25,-25).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turn(90)},
-            {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)}
+            {turn(103)},
+            {new Wait().setWaitTime(200)},
+            {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)},
+            {new Wait().setWaitTime(200)},
+            {turn(-100)},
+            {new Wait().setWaitTime(200)},
+            {new EncoderDrive().setDistances(30,30).setSpeed(DEFAULT_SPEED)},
+            {new Wait().setWaitTime(200)},
+            {turn(100)},
+            {new EncoderDrive().setDistances(30,30)}
+
     };
 
     @Override
