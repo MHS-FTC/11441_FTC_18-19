@@ -14,11 +14,11 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turn;
 import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turnRight90;
 
 /**
- * Created by byron.nice on 10/8/2018.
+ * Created by logan.shurts on 11/13/2018.
  */
 
 @Autonomous
-public class Crater extends AutonomousBase {
+public class SilverDepot extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
@@ -28,13 +28,9 @@ public class Crater extends AutonomousBase {
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turn(-100)},
+            {turn(-45)},
             {new Wait().setWaitTime(200)},
-            {new EncoderDrive().setDistances(30,30).setSpeed(DEFAULT_SPEED)},
-            {new Wait().setWaitTime(200)},
-            {turn(100)},
-            {new EncoderDrive().setDistances(30,30)}
-
+            {new EncoderDrive().setDistances(52,52).setSpeed(DEFAULT_SPEED)},
     };
 
     @Override
