@@ -14,18 +14,20 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turn;
 import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turnRight90;
 
 /**
- * Created by logan.shurts on 11/13/2018.
+ * Created by logan.shurts on 11/26/2018.
  */
 
 @Autonomous
-public class GoldDepot extends AutonomousBase {
+public class GoldDepotCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
             {turn(100)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(-55,-55).setSpeed(DEFAULT_SPEED)},
-
+            {new Wait().setWaitTime(200)},
+            {turn(-50)},
+            {new EncoderDrive().setDistances(110,110).setSpeed(DEFAULT_SPEED)},
     };
 
     @Override

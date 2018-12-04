@@ -22,18 +22,17 @@ public class GoldCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
+            {turn(100)},
+            {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(-25,-25).setSpeed(DEFAULT_SPEED)},
-            {new Wait().setWaitTime(200)},
-            {turn(103)},
-            {new Wait().setWaitTime(200)},
-            {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
             {turn(-100)},
             {new Wait().setWaitTime(200)},
-            {new EncoderDrive().setDistances(30,30).setSpeed(DEFAULT_SPEED)},
+            {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turn(100)},
-            {new EncoderDrive().setDistances(30,30)}
+            {turn(70)},
+            {new Wait().setWaitTime(200)},
+            {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)},
 
     };
 
