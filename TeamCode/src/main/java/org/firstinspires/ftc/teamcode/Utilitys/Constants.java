@@ -16,7 +16,7 @@ public class Constants {
     public static double DEFAULT_SPEED = 0.75;                                                  //Sets default speed to 0.75 power
     public static double WHEEL_CIRCUMFERENCE = 4 * Math.PI;                                     //Gives circumference for wheel to calculate distance.
     public static final double TURN_DISTANCE_90 = 17;                                           // Inches wheel turns in a 90 degree turn.
-    public static final String VUFORIA_LICENCE_KEY = "";
+    public static final String VUFORIA_LICENCE_KEY = "AeC5/bT/////AAABmQO1uzUab0hyuJhIBQOAvJhHHNX0ASWHAXfXxBtkH3P6l30sMIctcnMZon08tDxmpzrxBOprXwaN6YOpPwg4jXvlx8NzxH6sIoErS+7xhtD1xUv27NLDMWBShjkk7vLOjFioSw2u/5SqDg2w9Z3FvRGRJCjQGKTKCoDlvNpLQRpGWg1izC8uwoL9q+2CX/CN0DELxknUZTP2bvn/MN+QxGxLDgWQ/JXqVCdVrR5XLCMNJgfitJlzQQMPCQ8hjRoD8FPgTmbe3XaQQvnbU68wZRiMvgAYs6ftAv0pzgNBmHMHD1nJmjSPAG3+fWRBKSHoXozXuUsGYl4/qY5UeBGEjnXaxMDqyOaNPAaaf8aK20IE";
     //public static double LEAD_SCREW_TPI = 12;
     //public static double fgfg= LEAD_SCREW_TPI * ;
 

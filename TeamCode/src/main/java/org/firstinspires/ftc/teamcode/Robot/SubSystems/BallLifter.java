@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.Robot.SubSystems;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -12,6 +13,8 @@ import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.SubSystem;
  * Ethan Hampton Was Here! Please Remove This Line Cuz The Capitalization Sucks
  */
 
+
+@Disabled
 public class BallLifter extends SubSystem {
 
     private DcMotor ballLiftMotor;

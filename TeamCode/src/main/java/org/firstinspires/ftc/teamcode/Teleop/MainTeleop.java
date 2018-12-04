@@ -43,27 +43,27 @@ public class MainTeleop extends OpMode {
 
 
         if (gamepad2.dpad_up) {
-            robot.lifterBall.ballRaise();
+            robot.grabber.collectorExtendOut();
         } else if (gamepad2.dpad_down) {
-            robot.lifterBall.ballDown();
+            robot.grabber.collectorExtendIn();
         } else {
-            robot.lifterBall.ballStop();
+            robot.grabber.collectorExtendStop();
         }
+
+        //if (gamepad2.right_bumper) {
+            //robot.grabber.intake();
+        //}
+        //else  if (gamepad2.left_bumper) {
+            //robot.grabber.spit();
+        //}
+        //else robot.grabber.stop();
 
         if (gamepad2.right_bumper) {
-            robot.grabber.intake();
-        }
-        else  if (gamepad2.left_bumper) {
-            robot.grabber.spit();
-        }
-        else robot.grabber.stop();
-
-        if (gamepad1.right_bumper) {
-            robot.grabber.collectorLiftUp();
-        } else if (gamepad1.left_bumper) {
-            robot.grabber.collectorLiftDown();
+            robot.grabber.collectorRaise();
+        } else if (gamepad2.left_bumper) {
+            robot.grabber.collectorDown();
         } else {
-            robot.grabber.collectorLiftStop();
+            robot.grabber.collectorStop();
         }
     }
 }
