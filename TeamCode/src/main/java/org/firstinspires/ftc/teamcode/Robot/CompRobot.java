@@ -16,18 +16,15 @@ public class CompRobot extends RobotBase {
             .setMotorNames("leftFront", "rightFront", "leftBack", "rightBack");//Drives the robot
     public ParticleGrabber grabber = new ParticleGrabber()
             .setMotorNames("CollectorLift","CollectorExtend")
-            .setServoNames("dump","intake");
+            .setServoNames("intake");
     public Arm lift= new Arm()
             .setMotorNames("lift");
-    //public BallLifter lifterBall= new BallLifter()
-            //.setMotorNames("ballLift")
-            //.setServoNames("Dump");
+
 
     public CompRobot() {
         addSubSystem(drive);
         addSubSystem(grabber);
         addSubSystem(lift);
-        //addSubSystem(lifterBall);
 
     }
 }

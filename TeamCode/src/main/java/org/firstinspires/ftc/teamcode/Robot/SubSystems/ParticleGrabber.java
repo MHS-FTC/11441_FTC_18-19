@@ -17,11 +17,9 @@ public class ParticleGrabber extends SubSystem {
     private DcMotor collectorLiftMotor;
     private DcMotor collectorExtendMotor;
     private Servo intakeServo;
-    private Servo dumpServo;
 
 
 
-    private String dumpName;
     private String intakeName;
     private String collectorLiftName;
     private String collectorExtendName;
@@ -37,8 +35,7 @@ public class ParticleGrabber extends SubSystem {
         intakeServo = hardwareDevices.servo.get(intakeName);
         collectorLiftMotor = hardwareDevices.dcMotor.get(collectorLiftName);
         collectorExtendMotor = hardwareDevices.dcMotor.get(collectorExtendName);
-        dumpServo = hardwareDevices.servo.get(dumpName);
-        dumpServo.setPosition(0.05);
+        intakeServo.setPosition(0.05);
         return true;
     }
 
@@ -71,24 +68,7 @@ public class ParticleGrabber extends SubSystem {
         collectorExtendMotor.setPower(0);
     }
 
-
-    //public void intake() {
-        //double position = spinnerServo.getPosition()+0.005;
-        //spinnerServo.setPosition(position);
-    //}
-    //public void spit() {
-        //double position = spinnerServo.getPosition()-0.005;
-        //spinnerServo.setPosition(position);
-    //}
-
-    //public void stop() {
-        //double stop = spinnerServo.getPosition();
-        //spinnerServo.setPosition(stop);
-    //}
-
-    public ParticleGrabber setServoNames(String dump, String intake) {
-        //spinnerName = spinner;
-        dumpName = dump;
+    public ParticleGrabber setServoNames(String intake) {
         intakeName = intake;
 
         return this;
