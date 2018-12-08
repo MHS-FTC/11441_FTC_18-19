@@ -16,7 +16,7 @@ public class CompRobot extends RobotBase {
             .setMotorNames("leftFront", "rightFront", "leftBack", "rightBack");//Drives the robot
     public ParticleGrabber grabber = new ParticleGrabber()
             .setMotorNames("CollectorLift","CollectorExtend")
-            .setServoNames("Dump");
+            .setServoNames("dump","intake");
     public Arm lift= new Arm()
             .setMotorNames("lift");
     //public BallLifter lifterBall= new BallLifter()
