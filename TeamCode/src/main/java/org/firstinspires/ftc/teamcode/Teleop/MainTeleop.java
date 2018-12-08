@@ -50,6 +50,14 @@ public class MainTeleop extends OpMode {
             robot.grabber.collectorExtendStop();
         }
 
+        if (gamepad2.a) {
+            robot.grabber.Intake_Out();
+        } else if (gamepad2.b) {
+            robot.grabber.Intake_Mid();
+        } else if (gamepad2.y) {
+            robot.grabber.Intake_In();
+        }
+
 
         if (gamepad2.right_bumper) {
             robot.grabber.collectorRaise();

@@ -30,6 +30,7 @@ public class ParticleGrabber extends SubSystem {
 
 
 
+
     @Override
     public boolean init(HardwareMap hardwareDevices) {
         intakeServo = hardwareDevices.servo.get(intakeName);
@@ -66,6 +67,18 @@ public class ParticleGrabber extends SubSystem {
     public void collectorExtendStop() {
 
         collectorExtendMotor.setPower(0);
+    }
+
+    public void Intake_Out() {
+        intakeServo.setPosition(0.05);
+    }
+
+    public void Intake_Mid() {
+        intakeServo.setPosition(0.5);
+    }
+
+    public void Intake_In() {
+        intakeServo.setPosition(0.95);
     }
 
     public ParticleGrabber setServoNames(String intake) {
