@@ -66,5 +66,11 @@ public class MainTeleop extends OpMode {
         } else {
             robot.grabber.collectorStop();
         }
+
+        if (gamepad2.y) {
+            robot.spartanKicker.Spartan_Kick();
+        } else if (gamepad2.x) {
+            robot.spartanKicker.Spartan_Retreat();
+        }
     }
 }
