@@ -22,7 +22,7 @@ public class SilverDepotCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
-            {turn(100)},
+            {turn(105)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(-25,-25).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},

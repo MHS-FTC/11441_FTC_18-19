@@ -22,11 +22,11 @@ public class GoldDepotCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
-            {turn(100)},
+            {turn(110)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(-55,-55).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turn(-50)},
+            {turn(-45)},
             {new EncoderDrive().setDistances(110,110).setSpeed(DEFAULT_SPEED)},
     };
 
