@@ -8,21 +8,30 @@ import org.firstinspires.ftc.teamcode.FTC_API.Robot.SubSystems.SubSystem;
 public class Spartan extends SubSystem {
 
 
-    private Servo spartanKickerServo;
+    private Servo KickerServo;
 
-    private String spartanKickerName;
+    private String KickerName;
 
 
 
     @Override
     public boolean init(HardwareMap hardwareDevices) {
-        spartanKickerServo = hardwareDevices.servo.get(spartanKickerName);
-        spartanKickerServo.setPosition(0.05);
+        KickerServo = hardwareDevices.servo.get(KickerName);
+        KickerServo.setPosition(0.05);
         return true;
     }
 
+    public void Spartan_Kick() {
+        KickerServo.setPosition(0.95);
+    }
+
+    public void Spartan_Retreat() {
+        KickerServo.setPosition(0.05);
+    }
+
+
     public Spartan setServoNames(String kicker) {
-        spartanKickerName = kicker;
+        KickerName = kicker;
         return this;
     }
 }
