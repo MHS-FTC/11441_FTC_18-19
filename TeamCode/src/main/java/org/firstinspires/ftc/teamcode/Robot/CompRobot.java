@@ -20,7 +20,7 @@ public class CompRobot extends RobotBase {
             .setServoNames("intake");
     public Arm lift= new Arm()
             .setMotorNames("lift");
-    public Spartan Kicker= new Spartan()
+    public Spartan spartanKicker= new Spartan()
             .setServoNames("kicker");
 
 
@@ -29,6 +29,7 @@ public class CompRobot extends RobotBase {
         addSubSystem(drive);
         addSubSystem(grabber);
         addSubSystem(lift);
+        addSubSystem(spartanKicker);
 
     }
 }
