@@ -58,8 +58,7 @@ public class Cameratest extends LinearOpMode {
      */
     private TFObjectDetector tfod;
     public void runOpMode() {
-        // The TFObjectDetector uses the camera frames from the VuforiaLocalizer, so we create that
-        // first.
+        /** The TFObjectDetector uses the camera frames from the VuforiaLocalizer, so we create that first. */
         initVuforia();
 
         if (ClassFactory.getInstance().canCreateTFObjectDetector()) {

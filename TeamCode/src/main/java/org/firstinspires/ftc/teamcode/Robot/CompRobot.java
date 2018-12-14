@@ -6,6 +6,7 @@ import org.firstinspires.ftc.teamcode.Robot.SubSystems.Arm;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.BallLifter;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.MecanumWheelDrive;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.ParticleGrabber;
+import org.firstinspires.ftc.teamcode.Robot.SubSystems.Spartan;
 
 /**
  * Created by Byron.Nice on 8/29/2018.
@@ -19,6 +20,9 @@ public class CompRobot extends RobotBase {
             .setServoNames("intake");
     public Arm lift= new Arm()
             .setMotorNames("lift");
+    public Spartan Kicker= new Spartan()
+            .setServoNames("kicker");
+
 
 
     public CompRobot() {
