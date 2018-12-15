@@ -30,6 +30,5 @@ public class CompRobot extends RobotBase {
         addSubSystem(grabber);
         addSubSystem(lift);
         addSubSystem(spartanKicker);
-
     }
 }
