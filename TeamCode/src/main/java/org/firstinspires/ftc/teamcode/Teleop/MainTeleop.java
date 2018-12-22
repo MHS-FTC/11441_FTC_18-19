@@ -27,7 +27,7 @@ public class MainTeleop extends OpMode {
     public void loop() {
         robot.tick();
 
-        //drive the robot (in order, forward backward, rotate)
+        //drive the robot (in order, forward, backward, rotate)
         //NOTE: Y direction of joysticks needs to be reversed
         robot.drive.driveMecanum(-gamepad1.left_stick_y, gamepad1.right_stick_x, gamepad1.left_stick_x);
 
@@ -53,8 +53,6 @@ public class MainTeleop extends OpMode {
         if (gamepad2.a) {
             robot.grabber.Intake_Out();
         } else if (gamepad2.b) {
-            robot.grabber.Intake_Mid();
-        } else if (gamepad2.y) {
             robot.grabber.Intake_In();
         }
 

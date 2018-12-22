@@ -6,6 +6,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.AutonomousBase;
+import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.CallFunction;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
 import org.firstinspires.ftc.teamcode.Robot.CompRobot;
 
@@ -30,10 +31,13 @@ public class SilverDepotCrater extends AutonomousBase {
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turn(-45)},
+            {turn(-50)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(52,52).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
+            {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
+            {new Wait().setWaitTime(1000)},
+            {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Retreat())},
             {turn(260)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(110,110).setSpeed(DEFAULT_SPEED)},

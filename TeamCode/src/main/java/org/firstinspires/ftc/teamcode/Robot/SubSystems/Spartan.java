@@ -13,20 +13,19 @@ public class Spartan extends SubSystem {
     private String KickerName;
 
 
-
     @Override
     public boolean init(HardwareMap hardwareDevices) {
         KickerServo = hardwareDevices.servo.get(KickerName);
-        KickerServo.setPosition(0.05);
+        KickerServo.setPosition(0.95);
         return true;
     }
 
-    public void Spartan_Kick() {
-        KickerServo.setPosition(0.95);
+    public void Spartan_Kick(){
+        KickerServo.setPosition(0.05);
     }
 
     public void Spartan_Retreat() {
-        KickerServo.setPosition(0.05);
+        KickerServo.setPosition(0.95);
     }
 
 

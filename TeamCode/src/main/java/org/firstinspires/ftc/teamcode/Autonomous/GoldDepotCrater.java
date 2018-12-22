@@ -6,8 +6,10 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.AutonomousBase;
+import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.CallFunction;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
 import org.firstinspires.ftc.teamcode.Robot.CompRobot;
+import org.firstinspires.ftc.teamcode.Robot.SubSystems.Spartan;
 
 import static org.firstinspires.ftc.teamcode.Utilitys.Constants.DEFAULT_SPEED;
 import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turn;
@@ -24,12 +26,14 @@ public class GoldDepotCrater extends AutonomousBase {
             {new Wait().setWaitTime(500)},
             {turn(110)},
             {new Wait().setWaitTime(200)},
-            {new EncoderDrive().setDistances(-55,-55).setSpeed(DEFAULT_SPEED)},
+            {new EncoderDrive().setDistances(-55, -55).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turn(-45)},
-            {new EncoderDrive().setDistances(110,110).setSpeed(DEFAULT_SPEED)},
+            {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
+            {new Wait().setWaitTime(1000)},
+            {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Retreat())},
+            {turn(-50)},
+            {new EncoderDrive().setDistances(110, 110).setSpeed(DEFAULT_SPEED)},
     };
-
     @Override
     public void init() {
         init(hardwareMap,bot,steps);
