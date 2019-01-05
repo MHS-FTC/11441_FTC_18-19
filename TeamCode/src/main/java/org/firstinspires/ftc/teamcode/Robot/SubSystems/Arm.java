@@ -46,6 +46,9 @@ public class Arm extends SubSystem {
             return this;
         }
 
+        public DcMotor getMotor(){
+            return liftMotor;
+        }
         //public Arm setServoNames(String hand, String handLock) {
             //handName = hand;
             //handLockName = handLock;
