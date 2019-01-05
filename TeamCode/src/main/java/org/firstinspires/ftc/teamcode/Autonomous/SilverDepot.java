@@ -22,11 +22,11 @@ public class SilverDepot extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
-            {turn(100)},
+            {turn(90)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(-25,-25).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
-            {turn(103)},
+            {turn(90)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(35,35).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},

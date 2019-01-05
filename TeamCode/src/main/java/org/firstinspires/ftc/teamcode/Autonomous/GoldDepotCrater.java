@@ -24,14 +24,14 @@ public class GoldDepotCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
-            {turn(110)},
+            {turn(90)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(-55, -55).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(200)},
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
             {new Wait().setWaitTime(1000)},
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Retreat())},
-            {turn(-50)},
+            {turn(-45)},
             {new EncoderDrive().setDistances(110, 110).setSpeed(DEFAULT_SPEED)},
     };
     @Override

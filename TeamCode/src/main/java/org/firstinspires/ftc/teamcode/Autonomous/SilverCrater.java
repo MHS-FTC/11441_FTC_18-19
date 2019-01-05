@@ -20,7 +20,7 @@ public class SilverCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
             {new Wait().setWaitTime(500)},
-            {turn(100)},
+            {turn(90)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(-50, -50).setSpeed(DEFAULT_SPEED)},
     };
