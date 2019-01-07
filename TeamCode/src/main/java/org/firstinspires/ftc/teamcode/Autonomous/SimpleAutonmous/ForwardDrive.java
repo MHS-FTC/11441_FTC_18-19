@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.Autonomous.SimpleAutonmous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
+import org.firstinspires.ftc.teamcode.Autonomous.AllSeeingEyeTest;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.AutonomousBase;
@@ -20,6 +21,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.DEFAULT_SPEED;
 public class ForwardDrive extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module [][] steps = new Module[][] {
+            {new AllSeeingEyeTest()},
             {new Wait().setWaitTime(1000)}, //Waits and holds for 1 sec.
             {new EncoderDrive().setDistances(12,12).setSpeed(DEFAULT_SPEED)}, //Drives Forward for 12 inches at default speed.
             {new Wait().setWaitTime(1000)}, //Waits and holds for 1 sec.
