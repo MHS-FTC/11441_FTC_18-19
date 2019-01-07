@@ -7,7 +7,7 @@ import org.firstinspires.ftc.teamcode.Robot.SubSystems.Arm;
 
 public class Lifter extends Module {
     private Arm lift;
-    private final double ROTATIONS = 5;
+    private final double ROTATIONS = 41;
     private boolean isDone = false;
 
 
