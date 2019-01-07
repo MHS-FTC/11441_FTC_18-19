@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous.Modules;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
 import org.firstinspires.ftc.teamcode.Robot.SubSystems.Arm;
@@ -17,6 +18,7 @@ public class Lifter extends Module {
         lift.getMotor().setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         lift.getMotor().setTargetPosition((int) (ROTATIONS * lift.getMotor().getMotorType().getTicksPerRev()));
         lift.getMotor().setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        lift.getMotor().setDirection(DcMotorSimple.Direction.REVERSE);
         lift.liftUp();
     }
 
