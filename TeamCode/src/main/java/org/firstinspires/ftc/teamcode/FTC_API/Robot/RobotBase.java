@@ -20,7 +20,7 @@ public class RobotBase {
     private String driveSystem = "";
 
     private ElapsedTime time = new ElapsedTime();
-
+    public HardwareMap hardwareMap;
     /**
      * Adds subsystem to tracking by the internal system. This means it will receive all events and updates as needed.
      * It also will register the subsystem as the drive system if it uses that template. By default, the last subsystem added
@@ -78,7 +78,7 @@ public class RobotBase {
                 noErrors = false;
             }
         }
-
+        this.hardwareMap = hardwareMap;
         startTime();//start time keeping
         return noErrors;
     }
