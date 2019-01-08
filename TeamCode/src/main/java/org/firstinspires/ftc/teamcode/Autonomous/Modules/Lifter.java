@@ -8,7 +8,7 @@ import org.firstinspires.ftc.teamcode.Robot.SubSystems.Arm;
 
 public class Lifter extends Module {
     private Arm lift;
-    private final double ROTATIONS = 41;
+    private final double ROTATIONS = -20;
     private boolean isDone = false;
 
 
@@ -18,7 +18,7 @@ public class Lifter extends Module {
         lift.getMotor().setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         lift.getMotor().setTargetPosition((int) (ROTATIONS * lift.getMotor().getMotorType().getTicksPerRev()));
         lift.getMotor().setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        lift.getMotor().setDirection(DcMotorSimple.Direction.REVERSE);
+        //lift.getMotor().setDirection(DcMotorSimple.Direction.REVERSE);
         lift.liftUp();
     }
 
