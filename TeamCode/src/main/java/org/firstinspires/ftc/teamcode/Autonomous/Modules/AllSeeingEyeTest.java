@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.Autonomous;
+package org.firstinspires.ftc.teamcode.Autonomous.Modules;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
@@ -6,16 +6,22 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
 import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
 import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
+import org.firstinspires.ftc.teamcode.Utilitys.Direction;
 
 import java.util.List;
 
 import static org.firstinspires.ftc.teamcode.Utilitys.Constants.VUFORIA_LICENCE_KEY;
+import static org.firstinspires.ftc.teamcode.Utilitys.Direction.LEFT;
+import static org.firstinspires.ftc.teamcode.Utilitys.Direction.MIDDLE;
+import static org.firstinspires.ftc.teamcode.Utilitys.Direction.RIGHT;
 
 
 public class AllSeeingEyeTest extends Module {
     private static final String TFOD_MODEL_ASSET = "RoverRuckus.tflite";
     private static final String LABEL_GOLD_MINERAL = "Gold Mineral";
     private static final String LABEL_SILVER_MINERAL = "Silver Mineral";
+    //private Direction direction = Direction.UNKNOWN;
+
 
     /*
      * IMPORTANT: You need to obtain your own license key to use Vuforia. The string below with which
@@ -58,11 +64,11 @@ public class AllSeeingEyeTest extends Module {
             telemetry.addData("Sorry!", "This device is not compatible with TFOD");
         }
 
-        /** Wait for the game to begin */
+        // Wait for the game to begin
         telemetry.addData(">", "Press Play to start tracking");
         telemetry.update();
 
-        /** Activate Tensor Flow Object Detection. */
+        // Activate Tensor Flow Object Detection.
         if (tfod != null) {
             tfod.activate();
         }
@@ -117,6 +123,21 @@ public class AllSeeingEyeTest extends Module {
             tfod.shutdown();
         }
         return mineralPos;
+        /*if (hasTelemetry()) {
+            telemetry.log().add(direction.toString());
+        }
+        switch (direction) {
+            case LEFT:
+                return 0;
+            case MIDDLE:
+                return 1;
+            case RIGHT:
+                return 2;
+            default:
+                //should never hit this
+                return 3;
+        }*/
+
     }
 
 
