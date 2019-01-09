@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous.SimpleAutonmous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;

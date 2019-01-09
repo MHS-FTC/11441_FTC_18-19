@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.Autonomous.SimpleAutonmous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
-import org.firstinspires.ftc.teamcode.Autonomous.AllSeeingEyeTest;
+import org.firstinspires.ftc.teamcode.Autonomous.Modules.AllSeeingEyeTest;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.AutonomousBase;

@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous.SimpleAutonmous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.AutonomousBase;
@@ -14,7 +15,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.*;
  * DESCRIPTION: Robot drives in a 12" x 12" square to the right, returning to it's original position.
  */
 
-
+@Disabled
 @Autonomous
 public class BoxRight extends AutonomousBase {
     private CompRobot bot = new CompRobot();

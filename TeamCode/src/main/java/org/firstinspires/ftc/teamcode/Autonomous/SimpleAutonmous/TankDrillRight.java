@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous.SimpleAutonmous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
 import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.AutonomousBase;
@@ -16,7 +17,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.*;
  * backward, left turn, the forward to it's original position.
  */
 
-
+@Disabled
 @Autonomous
 public class TankDrillRight extends AutonomousBase {
     private CompRobot bot = new CompRobot();
