@@ -15,23 +15,23 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.*;
  * DESCRIPTION: Robot drives in a 12" x 12" square to the right, returning to it's original position.
  */
 
-@Disabled
+
 @Autonomous
 public class BoxRight extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private Module[][] steps = new Module[][]{
             {encodeForward(12)}, //Drive forward 12 inches
             {new Wait().setWaitTime(200)}, //Waits for .2 sec.
-            {turnRight90()}, //Turns to the right
+            {turn(90)}, //Turns to the right
             {encodeForward(12)},//Drive forward 12 inches
             {new Wait().setWaitTime(200)},//Waits for .2 sec.
-            {turnRight90()},//Turns to the right
+            {turn(90)},//Turns to the right
             {encodeForward(12)},//Drive forward 12 inches
             {new Wait().setWaitTime(200)},//Waits for .2 sec.
-            {turnRight90()},//Turns to the right
+            {turn(90)},//Turns to the right
             {encodeForward(12)},//Drive forward 12 inches
             {new Wait().setWaitTime(200)},//Waits for .2 sec.
-            {turnRight90()},//Turns to the right
+            {turn(90)},//Turns to the right
 
     };
 

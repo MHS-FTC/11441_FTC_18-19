@@ -36,7 +36,7 @@ public class ParticleGrabber extends SubSystem {
         intakeServo = hardwareDevices.servo.get(intakeName);
         collectorLiftMotor = hardwareDevices.dcMotor.get(collectorLiftName);
         collectorExtendMotor = hardwareDevices.dcMotor.get(collectorExtendName);
-        intakeServo.setPosition(0.05);
+        intakeServo.setPosition(0.95);
         return true;
     }
 
