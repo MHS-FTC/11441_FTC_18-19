@@ -19,7 +19,7 @@ public class Arm extends SubSystem {
         private String liftName;
         //private String handName;
         //private String handLockName;
-        private final double LIFT_SPEED= 0.25;
+        private final double LIFT_SPEED= 1;
 
 
 
