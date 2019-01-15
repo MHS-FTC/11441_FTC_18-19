@@ -17,12 +17,14 @@ public class ParticleGrabber extends SubSystem {
     private DcMotor collectorLiftMotor;
     private DcMotor collectorExtendMotor;
     private Servo intakeServo;
+    private Servo lockServo;
 
 
 
     private String intakeName;
     private String collectorLiftName;
     private String collectorExtendName;
+    private String lockName;
 
 
     private final double COLLECTOR_EXTEND_SPEED = 0.4;
@@ -34,9 +36,11 @@ public class ParticleGrabber extends SubSystem {
     @Override
     public boolean init(HardwareMap hardwareDevices) {
         intakeServo = hardwareDevices.servo.get(intakeName);
+        lockServo = hardwareDevices.servo.get(lockName);
         collectorLiftMotor = hardwareDevices.dcMotor.get(collectorLiftName);
         collectorExtendMotor = hardwareDevices.dcMotor.get(collectorExtendName);
         intakeServo.setPosition(0.95);
+        lockServo.setPosition(0.05);
         return true;
     }
 
@@ -81,8 +85,11 @@ public class ParticleGrabber extends SubSystem {
         intakeServo.setPosition(0.95);
     }
 
-    public ParticleGrabber setServoNames(String intake) {
+    public void Lock() {lockServo.setPosition(0.05);}
+
+    public ParticleGrabber setServoNames(String intake, String lock) {
         intakeName = intake;
+        lockName = lock;
 
         return this;
     }
