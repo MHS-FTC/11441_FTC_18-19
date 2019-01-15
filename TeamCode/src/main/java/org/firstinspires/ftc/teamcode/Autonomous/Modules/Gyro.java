@@ -42,10 +42,10 @@ public class Gyro extends Module {
         telemetry.addLine("Steering Error: " + driveSteering);
 
         double leftPower, rightPower;
-        if (headingError < 0) {
+        if (headingError < 0) {                  // Turn Left
             leftPower = -midPower + driveSteering;
             rightPower = midPower - driveSteering;
-        } else {
+        } else {                                        // Turn Right
             leftPower = midPower + driveSteering;
             rightPower = -midPower - driveSteering;
         }
