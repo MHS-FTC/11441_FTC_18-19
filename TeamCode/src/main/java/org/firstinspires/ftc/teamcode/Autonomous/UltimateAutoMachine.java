@@ -27,7 +27,7 @@ public class UltimateAutoMachine extends AutonomousBase {
             {new DriveTime().setSpeeds(0,0,4).setTime(200)},
             {new Wait().setWaitTime(200)},
             {new EncoderDrive().setDistances(3,3).setSpeed(DEFAULT_SPEED)},
-            {turn(-90)},
+            {turn(-80)},
             {new AllSeeingEyeTest()},
             {
                     turn(23),
@@ -35,9 +35,22 @@ public class UltimateAutoMachine extends AutonomousBase {
                     turn(-23),
             },
             {
-                    new EncoderDrive().setDistances(40,40).setSpeed(DEFAULT_SPEED), new Wait().setWaitTime(200), turn(-50), new Wait().setWaitTime(200), new EncoderDrive().setDistances(20,20),
+                    new EncoderDrive().setDistances(40,40).setSpeed(DEFAULT_SPEED),
                     new EncoderDrive().setDistances(50,50).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(40,40).setSpeed(DEFAULT_SPEED), new Wait().setWaitTime(200), turn(50), new Wait().setWaitTime(200), new EncoderDrive().setDistances(20,20),
+                    new EncoderDrive().setDistances(40,40).setSpeed(DEFAULT_SPEED),
+            },
+            {new Wait().setWaitTime(200)},
+            {
+                    turn(-50),
+                    turn(0),
+                    turn(50),
+
+            },
+            {new Wait().setWaitTime(200)},
+            {
+                    new EncoderDrive().setDistances(20,20).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(20,20).setSpeed(DEFAULT_SPEED),
             },
             {new Wait().setWaitTime(200)},
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
