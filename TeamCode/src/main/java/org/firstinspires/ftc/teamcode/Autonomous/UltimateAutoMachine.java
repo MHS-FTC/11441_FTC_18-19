@@ -30,33 +30,37 @@ public class UltimateAutoMachine extends AutonomousBase {
             {turn(-80)},
             {new AllSeeingEyeTest()},
             {
-                    turn(23),
-                    turn(0),
                     turn(-23),
-            },
-            {
-                    new EncoderDrive().setDistances(40,40).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(50,50).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(40,40).setSpeed(DEFAULT_SPEED),
-            },
-            {new Wait().setWaitTime(200)},
-            {
-                    turn(-50),
                     turn(0),
-                    turn(50),
+                    turn(23),
+            },
+            {
+                    new EncoderDrive().setDistances(-36,-36).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-50,-50).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-37,-37).setSpeed(DEFAULT_SPEED),
+            },
+            {
+                    turn(45),
+                    turn(-30),
+                    turn(-60),
 
             },
-            {new Wait().setWaitTime(200)},
             {
-                    new EncoderDrive().setDistances(20,20).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(20,20).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-27,-27).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-9.5,-9.5).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-34.5,-34.5).setSpeed(DEFAULT_SPEED),
+            },
+            {
+                    turn(30),
+                    turn(90),
+                    turn(90),
             },
             {new Wait().setWaitTime(200)},
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
             {new Wait().setWaitTime(1000)},
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Retreat())},
-
+            {new Wait().setWaitTime(200)},
+            {new EncoderDrive().setDistances(70,70).setSpeed(DEFAULT_SPEED)},
     };
 
     @Override
