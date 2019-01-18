@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.AllSeeingEyeTest;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.DriveTime;
@@ -16,6 +17,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.DEFAULT_SPEED;
 import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turn;
 
 
+@Disabled
 @Autonomous
 public class UltimateAutoMachine extends AutonomousBase {
     private CompRobot bot = new CompRobot();
