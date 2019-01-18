@@ -16,7 +16,7 @@ public class Gyro extends Module {
 
     @Override
     public void start() {
-        gyro = robot.hardwareMap.gyroSensor.get("gyro");
+        gyro = robot.hardwareMap.gyroSensor.get("tiltArover");
         gyro.resetZAxisIntegrator();
         if (calibrate) {
             telemetry.addLine("Calibrating Gyro...");
