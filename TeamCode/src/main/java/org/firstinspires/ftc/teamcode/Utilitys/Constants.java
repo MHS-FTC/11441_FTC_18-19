@@ -13,7 +13,7 @@ import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
 public class Constants {
     public static Module forward = new TeamDriveTime().setSpeeds(1,1).setTime(2000);   //Moves forward at full power for 2 sec.
     public static Module turn = new TeamDriveTime().setSpeeds(0.5, 0.9).setTime(2500); //Turns the robot to the left.
-    public static double DEFAULT_SPEED = 0.75;                                                  //Sets default speed to 0.75 power
+    public static double DEFAULT_SPEED = 0.9;                                                  //Sets default speed to 0.75 power
     public static double WHEEL_CIRCUMFERENCE = 4 * Math.PI;                                     //Gives circumference for wheel to calculate distance.
     public static final double TURN_DISTANCE_90 = 21;                                           // Inches wheel turns in a 90 degree turn.
     public static final String VUFORIA_LICENCE_KEY = "AeC5/bT/////AAABmQO1uzUab0hyuJhIBQOAvJhHHNX0ASWHAXfXxBtkH3P6l30sMIctcnMZon08tDxmpzrxBOprXwaN6YOpPwg4jXvlx8NzxH6sIoErS+7xhtD1xUv27NLDMWBShjkk7vLOjFioSw2u/5SqDg2w9Z3FvRGRJCjQGKTKCoDlvNpLQRpGWg1izC8uwoL9q+2CX/CN0DELxknUZTP2bvn/MN+QxGxLDgWQ/JXqVCdVrR5XLCMNJgfitJlzQQMPCQ8hjRoD8FPgTmbe3XaQQvnbU68wZRiMvgAYs6ftAv0pzgNBmHMHD1nJmjSPAG3+fWRBKSHoXozXuUsGYl4/qY5UeBGEjnXaxMDqyOaNPAaaf8aK20IE";
