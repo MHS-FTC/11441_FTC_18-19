@@ -21,48 +21,44 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turn;
 public class GyroAutoGold extends AutonomousBase {
     private CompRobot bot = new CompRobot();
     private final Module[][] steps = new Module[][]{
-            {new Wait().setWaitTime(100)},
             {new Lifter()},
-            {new Wait().setWaitTime(100)},
+            {new Wait().setWaitTime(50)},
             {new EncoderDrive().setDistances(-3,-3).setSpeed(DEFAULT_SPEED)},
-            {new DriveTime().setSpeeds(0,0,4).setTime(200)},
-            {new Wait().setWaitTime(100)},
+            {new Wait().setWaitTime(50)},
+            {new DriveTime().setSpeeds(0,0,.4).setTime(200)},
+            {new Wait().setWaitTime(50)},
             {new EncoderDrive().setDistances(3,3).setSpeed(DEFAULT_SPEED)},
-            {new Wait().setWaitTime(100)},
-            {new Gyro().setTurn(85).setCalibrate(true)},
+            {new Wait().setWaitTime(50)},
+            {new Gyro().setTurn(83).setCalibrate(true)},
             {new AllSeeingEyeTest()},
             {
-                    new Gyro().setTurn(-23).setCalibrate(false),
+                    new Gyro().setTurn(19).setCalibrate(false),
                     new Gyro().setTurn(0).setCalibrate(false),
-                    new Gyro().setTurn(23).setCalibrate(false),
-            },
-            /*{
-                    new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
+                    new Gyro().setTurn(-19).setCalibrate(false),
             },
             {
-                    Gyro.set.setTurn(90).setCalibrate(false),
-                    Gyro.set.setTurn(90).setCalibrate(false),
-                    Gyro.set.setTurn(90).setCalibrate(false),
+                    new EncoderDrive().setDistances(-35,-35).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-50,-50).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-35,-35).setSpeed(DEFAULT_SPEED),
+            },
+            {
+                    new Gyro().setTurn(100).setCalibrate(false),
+                    new Gyro().setTurn(180).setCalibrate(false),
+                    new Gyro().setTurn(-135).setCalibrate(false),
 
             },
             {
+                    new EncoderDrive().setDistances(23,23).setSpeed(DEFAULT_SPEED),
                     new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(23,23).setSpeed(DEFAULT_SPEED),
             },
-            {
-                    Gyro.set.setTurn(90).setCalibrate(false),
-                    Gyro.set.setTurn(90).setCalibrate(false),
-                    Gyro.set.setTurn(90).setCalibrate(false),
-            },
-            {new Wait().setWaitTime(100)},
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
             {new Wait().setWaitTime(500)},
-            {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Retreat())},
-            {new Wait().setWaitTime(100)},
-            {new EncoderDrive().setDistances(0,0).setSpeed(DEFAULT_SPEED)},*/
+            {
+                    new Wait().setWaitTime(0),
+                    new DriveTime().setSpeeds(0,0,.5).setTime(500),
+                    new DriveTime().setSpeeds(0,0,.5).setTime(1000),
+            },
     };
 
     @Override
