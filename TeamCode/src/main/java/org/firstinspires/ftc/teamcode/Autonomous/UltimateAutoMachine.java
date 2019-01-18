@@ -51,9 +51,9 @@ public class UltimateAutoMachine extends AutonomousBase {
                     new EncoderDrive().setDistances(-34.5,-34.5).setSpeed(DEFAULT_SPEED),
             },
             {
-                    turn(30),
-                    turn(90),
-                    turn(90),
+                    turn(-150),
+                    turn(-90),
+                    turn(-90),
             },
             {new Wait().setWaitTime(200)},
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
