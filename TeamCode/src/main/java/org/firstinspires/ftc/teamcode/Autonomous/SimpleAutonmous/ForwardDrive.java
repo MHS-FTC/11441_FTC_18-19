@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous.SimpleAutonmous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.AllSeeingEyeTest;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
@@ -16,7 +17,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.DEFAULT_SPEED;
  * DESCRIPTION: Robot drives forward 12 inches.
  */
 
-
+@Disabled
 @Autonomous(name = "ForwardDrive")
 public class ForwardDrive extends AutonomousBase {
     private CompRobot bot = new CompRobot();

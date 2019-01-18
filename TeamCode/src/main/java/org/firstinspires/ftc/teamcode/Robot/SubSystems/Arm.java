@@ -37,9 +37,20 @@ public class Arm extends SubSystem {
         public void stopLift() {
             liftMotor.setPower(0);}
         public void liftDown() {
-            liftMotor.setPower(-LIFT_SPEED);
+            liftMotor.setPower(-LIFT_SPEED);}
+        /*public void autoUp() {
+            liftMotor.setPower(LIFT_SPEED),
+                    wait(10000),
+            liftMotor.setPower(0);
+            ;}
+        public void autoLiftDown() {
+            liftMotor.setPower(-LIFT_SPEED),
+            wait(10000),
+            liftMotor.setPower(0),
+             ;}
+        */
 
-        }
+
 
         public Arm setMotorNames(String lift) {
             liftName = lift;

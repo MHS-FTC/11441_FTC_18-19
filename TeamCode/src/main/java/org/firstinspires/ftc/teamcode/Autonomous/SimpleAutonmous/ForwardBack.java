@@ -16,7 +16,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.DEFAULT_SPEED;
  * DESCRIPTION: Robot drives forward 12 inches, waits, then drives backwards 12 inches.
  */
 
-
+@Disabled
 @Autonomous
 public class ForwardBack extends AutonomousBase {
     private CompRobot bot = new CompRobot();

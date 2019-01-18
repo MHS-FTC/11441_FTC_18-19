@@ -15,7 +15,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.*;
  * DESCRIPTION: Robot drives in a 12" x 12" square to the right, returning to it's original position.
  */
 
-
+@Disabled
 @Autonomous
 public class BoxRight extends AutonomousBase {
     private CompRobot bot = new CompRobot();

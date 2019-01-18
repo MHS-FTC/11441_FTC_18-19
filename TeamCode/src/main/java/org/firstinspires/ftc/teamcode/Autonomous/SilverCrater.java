@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
@@ -14,7 +15,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turn;
 /**
  * Created by logan.shurts on 11/13/2018
  */
-
+@Disabled
 @Autonomous
 public class SilverCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();

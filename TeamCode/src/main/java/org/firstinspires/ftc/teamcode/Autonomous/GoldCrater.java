@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.Autonomous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.EncoderDrive;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
@@ -17,6 +18,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.turnRight90;
  * Created by byron.nice on 10/8/2018.
  */
 
+@Disabled
 @Autonomous
 public class GoldCrater extends AutonomousBase {
     private CompRobot bot = new CompRobot();

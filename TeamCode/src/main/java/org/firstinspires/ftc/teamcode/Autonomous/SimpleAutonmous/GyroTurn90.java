@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.Autonomous.SimpleAutonmous;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Gyro;
 import org.firstinspires.ftc.teamcode.Autonomous.Modules.Wait;
@@ -9,6 +10,7 @@ import org.firstinspires.ftc.teamcode.FTC_API.Autonomous.Modules.Module;
 import org.firstinspires.ftc.teamcode.Robot.CompRobot;
 
 
+@Disabled
 @Autonomous
 public class GyroTurn90 extends AutonomousBase {
     private CompRobot bot = new CompRobot();
