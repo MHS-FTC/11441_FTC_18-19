@@ -37,9 +37,9 @@ public class GyroAutoSilver extends AutonomousBase {
                     new Gyro().setTurn(-19).setCalibrate(false),
             },
             {
-                    new EncoderDrive().setDistances(-40,-40).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(-37,-37).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(-40,-40).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-38,-38).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-35,-35).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-38,-38).setSpeed(DEFAULT_SPEED),
             },
     };
 
