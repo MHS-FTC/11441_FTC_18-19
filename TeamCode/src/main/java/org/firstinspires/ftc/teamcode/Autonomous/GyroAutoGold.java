@@ -25,7 +25,7 @@ public class GyroAutoGold extends AutonomousBase {
             {new Wait().setWaitTime(50)},
             {new EncoderDrive().setDistances(-3,-3).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(50)},
-            {new DriveTime().setSpeeds(0,0,.4).setTime(200)},
+            {new DriveTime().setSpeeds(0,0,4).setTime(200)},
             {new Wait().setWaitTime(50)},
             {new EncoderDrive().setDistances(3,3).setSpeed(DEFAULT_SPEED)},
             {new Wait().setWaitTime(50)},
@@ -42,8 +42,8 @@ public class GyroAutoGold extends AutonomousBase {
                     new EncoderDrive().setDistances(-35,-35).setSpeed(DEFAULT_SPEED),
             },
             {
-                    new Gyro().setTurn(100).setCalibrate(false),
-                    new Gyro().setTurn(180).setCalibrate(false),
+                    new Gyro().setTurn(110).setCalibrate(false),
+                    new Gyro().setTurn(160).setCalibrate(false),
                     new Gyro().setTurn(-135).setCalibrate(false),
 
             },
@@ -54,10 +54,15 @@ public class GyroAutoGold extends AutonomousBase {
             },
             {new CallFunction().setFunction(() -> bot.spartanKicker.Spartan_Kick())},
             {new Wait().setWaitTime(500)},
-            {
+            /*{
                     new Wait().setWaitTime(0),
                     new DriveTime().setSpeeds(0,0,.5).setTime(500),
                     new DriveTime().setSpeeds(0,0,.5).setTime(1000),
+            },*/
+            {
+                    new EncoderDrive().setDistances(-36,-36).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-36,-36).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-36,-36).setSpeed(DEFAULT_SPEED),
             },
     };
 
