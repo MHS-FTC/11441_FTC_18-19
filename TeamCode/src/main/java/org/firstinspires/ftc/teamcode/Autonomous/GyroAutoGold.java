@@ -60,9 +60,9 @@ public class GyroAutoGold extends AutonomousBase {
                     new DriveTime().setSpeeds(0,0,.5).setTime(1000),
             },*/
             {
-                    new EncoderDrive().setDistances(-36,-36).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(-36,-36).setSpeed(DEFAULT_SPEED),
-                    new EncoderDrive().setDistances(-36,-36).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-24,-24).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-24,-24).setSpeed(DEFAULT_SPEED),
+                    new EncoderDrive().setDistances(-24,-24).setSpeed(DEFAULT_SPEED),
             },
     };
 
