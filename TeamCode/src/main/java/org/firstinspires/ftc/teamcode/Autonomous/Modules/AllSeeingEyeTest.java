@@ -98,11 +98,11 @@ public class AllSeeingEyeTest extends Module {
                     if (goldMineralX != -1 && silverMineral1X != -1 && silverMineral2X != -1) {
                         if (goldMineralX < silverMineral1X && goldMineralX < silverMineral2X) {
                             telemetry.addData("Gold Mineral Position", "Left");
-                            mineralPos = 2;
+                            mineralPos = 0;
                             isDone = true;
                         } else if (goldMineralX > silverMineral1X && goldMineralX > silverMineral2X) {
                             telemetry.addData("Gold Mineral Position", "Right");
-                            mineralPos = 0;
+                            mineralPos = 2;
                             isDone = true;
                         } else {
                             telemetry.addData("Gold Mineral Position", "Center");
