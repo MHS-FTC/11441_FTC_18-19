@@ -78,11 +78,11 @@ public class ParticleGrabber extends SubSystem {
     }
 
     public void Intake_Mid() {
-        intakeServo.setPosition(0.5);
+        intakeServo.setPosition(0.10);
     }
 
     public void Intake_In() {
-        intakeServo.setPosition(0.75);
+        intakeServo.setPosition(0.92);
     }
 
     public void Lock() {lockServo.setPosition(0.05);}
