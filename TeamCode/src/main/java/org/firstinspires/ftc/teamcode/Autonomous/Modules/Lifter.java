@@ -10,7 +10,7 @@ import static org.firstinspires.ftc.teamcode.Utilitys.Constants.BILDA_MOTOR_TICK
 
 public class Lifter extends Module {
     private Arm lift;
-    private final double ROTATIONS = -17;
+    private final double ROTATIONS = -15;
     private boolean isDone = false;
 
 
