@@ -16,15 +16,15 @@ public class ParticleGrabber extends SubSystem {
 
     private DcMotor collectorLiftMotor;
     private DcMotor collectorExtendMotor;
-    private Servo intakeServo;
-    private Servo lockServo;
+    private DcMotor intakeMotor;
+    private Servo blockServo;
 
 
 
     private String intakeName;
     private String collectorLiftName;
     private String collectorExtendName;
-    private String lockName;
+    private String blockName;
 
 
     private final double COLLECTOR_EXTEND_SPEED = 0.4;
@@ -35,68 +35,51 @@ public class ParticleGrabber extends SubSystem {
 
     @Override
     public boolean init(HardwareMap hardwareDevices) {
-        intakeServo = hardwareDevices.servo.get(intakeName);
-        lockServo = hardwareDevices.servo.get(lockName);
+        blockServo = hardwareDevices.servo.get(blockName);
         collectorLiftMotor = hardwareDevices.dcMotor.get(collectorLiftName);
         collectorExtendMotor = hardwareDevices.dcMotor.get(collectorExtendName);
-        intakeServo.setPosition(0.95);
-        lockServo.setPosition(0.05);
+        intakeMotor = hardwareDevices.dcMotor.get(intakeName);
+        blockServo.setPosition(0.95);
         return true;
     }
 
-    public void collectorRaise() {
+    public void collectorRaise() { collectorLiftMotor.setPower(COLLECTOR_LIFT_SPEED); }
 
-        collectorLiftMotor.setPower(COLLECTOR_LIFT_SPEED);
-    }
+    public void collectorStop() { collectorLiftMotor.setPower(0); }
 
-    public void collectorStop() {
-        collectorLiftMotor.setPower(0);
-
-    }
-
-    public void collectorDown() {
-        collectorLiftMotor.setPower(-COLLECTOR_LIFT_SPEED);
-
-    }
+    public void collectorDown() { collectorLiftMotor.setPower(-COLLECTOR_LIFT_SPEED); }
 
     public void collectorExtendOut() {
         collectorExtendMotor.setPower(COLLECTOR_EXTEND_SPEED);
     }
 
-    public void collectorExtendIn() {
-        collectorExtendMotor.setPower(-COLLECTOR_EXTEND_SPEED);
+    public void collectorExtendIn() { collectorExtendMotor.setPower(-COLLECTOR_EXTEND_SPEED); }
 
+    public void collectorExtendStop() { collectorExtendMotor.setPower(0); }
+
+    public void Intake_In() {intakeMotor.setPower(1);}
+
+    public void Intake_Out() {intakeMotor.setPower(-1);}
+
+    public void Block_Out() {
+        blockServo.setPosition(0.05);
     }
 
-    public void collectorExtendStop() {
-
-        collectorExtendMotor.setPower(0);
+    public void Block_In() {
+        blockServo.setPosition(0.92);
     }
 
-    public void Intake_Out() {
-        intakeServo.setPosition(0.05);
-    }
 
-    public void Intake_Mid() {
-        intakeServo.setPosition(0.10);
-    }
 
-    public void Intake_In() {
-        intakeServo.setPosition(0.92);
-    }
-
-    public void Lock() {lockServo.setPosition(0.05);}
-
-    public ParticleGrabber setServoNames(String intake, String lock) {
-        intakeName = intake;
-        lockName = lock;
-
+    public ParticleGrabber setServoNames(String block) {
+        blockName = block;
         return this;
     }
 
-    public ParticleGrabber setMotorNames(String collectorLift, String collectorExtend) {
+    public ParticleGrabber setMotorNames(String collectorLift, String collectorExtend, String intake) {
         collectorLiftName = collectorLift;
         collectorExtendName = collectorExtend;
+        intakeName = intake;
 
         return this;
     }

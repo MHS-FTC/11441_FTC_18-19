@@ -14,8 +14,8 @@ public class CompRobot extends RobotBase {
     public MecanumWheelDrive drive = new MecanumWheelDrive()
             .setMotorNames("leftFront", "rightFront", "leftBack", "rightBack");//Drives the robot
     public ParticleGrabber grabber = new ParticleGrabber()
-            .setMotorNames("CollectorLift","CollectorExtend")
-            .setServoNames("intake", "lock");
+            .setMotorNames("CollectorLift","CollectorExtend", "Intake")
+            .setServoNames("lock");
     public Arm lift= new Arm()
             .setMotorNames("lift");
     public Spartan spartanKicker= new Spartan()
